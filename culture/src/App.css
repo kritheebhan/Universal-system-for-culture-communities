@@ -1,0 +1,183 @@
+@font-face {
+  font-family: ultra;
+  src: url(../src/components/fonts/Anta/Anta-Regular.ttf);
+}
+
+/* Navebar */
+
+.nav{
+  font-family: ultra;
+  position: fixed;
+  width: 100%;
+  border-bottom: 1px solid;
+  color: rgb(110, 110, 110);
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.navbtn{
+    background-color: white;
+    color: black;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    border: 2px solid white;
+    border-radius: 10em;
+    margin-left: 1.5em;
+    padding:  10px 20px;
+    transition: background-color .3s cubic-bezier(.25, .46, .45, .94), color .3s cubic-bezier(.25, .46, .45, .94);
+}
+.navbtn:hover{
+  background-color: #BA9A3E;
+  border: 2px solid #BA9A3E;
+  color: white;
+}
+/* Home */
+
+.con{
+  background-image: url(./components/images/img0.jpg);
+  font-family: ultra;
+  z-index: 10;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, .4);
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+  /* align-items: center; */
+  display: flex;
+  /* position: relative; */
+}
+
+.maintxt{
+  letter-spacing: 3px;
+}
+.button{
+  background-color: #BA9A3E;
+  border-radius: 20px;
+  transition: background-color .3s 
+  cubic-bezier(.25, .46, .45, .94), color .3s 
+  cubic-bezier(.25, .46, .45, .94);
+}
+.button:hover{
+  background-color: white;
+  color: black;
+}
+
+/* Signin and signup  */
+
+.Signin-con{
+  /* background-image: url(./components//images/img0.jpg); */
+  background-color: black;
+  font-family: ultra;
+}
+.input-box{
+  margin: 15px 0px;
+}
+.input-box[type=text]{
+  outline: none;
+  border-bottom: 2px solid rgb(252, 250, 250);
+}
+.input-box[type=email]{
+  outline: none;
+  border-bottom: 2px solid rgb(252, 250, 250);
+}
+.input-box[type=password]{
+  outline: none;
+  border-bottom: 2px solid rgb(255, 255, 255);
+}
+
+.signin{
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+.signup-btn{
+  color: #BA9A3E;
+}
+
+
+
+/* Navebar1 */
+
+.nav1 {
+  display: flex;
+  /* background-color: #333; */
+  color: black;
+}
+
+.top-navbar {
+  width: 100%;
+  position: fixed;
+  background-color: white;
+  box-shadow: 0px 0px 15px 8px rgba(0,0,0,0.1);
+}
+
+.side-navbar {
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: white;
+  padding-top: 20px;
+  box-shadow: 0px 0px 15px 8px rgba(0,0,0,0.1);
+
+}
+.nav1-logout{
+  padding-top: 240px;
+}
+
+/* User */
+
+.Home1{
+  /* background-color: #122786; */
+  /* margin-left: 250px; */
+  height: 100vh;
+  background-color: #e1e4ee;
+}
+.map{
+  height: 100vh;
+  background-color: #0d287e;
+}
+
+.btn{
+    padding: 4px 8px;
+    border: 2px solid #053b50;
+    border-radius: 10px;
+    margin: 0px 13px;;
+    background-color: #053b50;
+    box-shadow: 0px 4px 0px #031e29;
+    
+}
+.btn:hover {
+    position: relative;
+    top: 5px;
+    box-shadow: none !important;
+    transition: 0.3s ease-in-out;
+}
+
+.Dataset{
+  height: 100vh;
+  background-color: #e1e4ee;
+}
+
+
+table {
+  margin-top: 30px;
+}
+
+/* map */
+
+.custom-map-container {
+  position: fixed;
+  height: 624px; /* Set the initial height */
+  width: 100%; /* Set the initial width */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* margin-left: 17%; */
+  margin-top: 4.7%;
+  z-index: -1;
+}
