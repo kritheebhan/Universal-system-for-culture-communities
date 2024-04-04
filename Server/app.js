@@ -77,17 +77,36 @@ app.post("/userData", async (req, res) => {
     }
 });
 
-// Add endpoint to delete user
-app.delete("/deleteUser/:userId", async (req, res) => {
-    const userId = req.params.userId;
+app.get("/getAllUser",async(req,res)=>{
+    try{
+        const allUser=await User.find({});
+        res.send({status:"ok",data:allUser});
+    }catch (error) {
+        console.log(error);
+    }
+})
+
+app.post("/deleteUser", async (req, res) => {
+    const { userid } = req.body;
     try {
-      await User.findByIdAndDelete(userId);
-      res.json({ status: "ok" });
+      await User.deleteOne({ _id: userid }); // Use async/await to handle asynchronous operations
+      res.send({ status: "Ok", data: "Deleted" });
     } catch (error) {
       console.error(error);
-      res.json({ status: "error" });
+      res.status(500).send({ status: "Error", message: "An error occurred while deleting user" });
     }
   });
+
+  app.get("/getUserCount", async (req, res) => {
+    try {
+      const count = await User.countDocuments(); // Count all documents in the User collection
+      res.send({ status: "ok", count: count });
+    } catch (error) {
+      console.error(error);
+      res.status(500).send({ status: "error", message: "An error occurred while fetching user count" });
+    }
+  });
+  
   
 app.listen(5000, () => {
     console.log("server is running")

@@ -6,6 +6,7 @@ import Signin from './Pages/Signin';
 import Signup from './Pages/Signup';
 import Navebar from './components/Navebar';
 import Navbar1 from './components/Navebar1';
+import Adminnavbar from './components/Admin_navbar'
 import Home1 from "./Pages/Home1";
 import Dataset from './Pages/Dataset'
 import Search from './Pages/Search'
@@ -27,7 +28,8 @@ function App() {
   return (
     <>
       {(isHome ) && <Navebar />}
-      {(isLoggedIn === "true" && (isHome1 || isDataset || isSearch || isMap || isAdmin)) && <Navbar1 />}
+      {(isLoggedIn === "true" && (isHome1 || isDataset || isSearch || isMap )) && <Navbar1 />}
+      {(isAdmin) && <Adminnavbar/>}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Signup" element={<Signup />} />
@@ -36,6 +38,7 @@ function App() {
         <Route path="/Dataset" element={<Dataset />} />
         <Route path="/Search" element={<Search />} />
         <Route path="/Map" element={<Map />} />
+        <Route path="/Adminnavbar" element={<Adminnavbar />} />
         <Route path="/Admin" element={<Admin />} />
       </Routes>
     </>

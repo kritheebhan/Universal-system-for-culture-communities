@@ -52,7 +52,7 @@ class Signup extends Component {
           secretKey: "",
         });
         // Redirect the user to the sign-in page
-        window.location.href = "./Home1";
+        window.location.href = "./Signin";
       } else {
         alert("Something went wrong");
       }
@@ -75,7 +75,7 @@ class Signup extends Component {
                 className='signin flex flex-col border shadow-2xl rounded-md p-9'
                 onSubmit={this.handleSubmit}
               >
-                <div className='text-white text-3xl text-center'>
+                <div className='text-white text-3xl text-center mb-5'>
                   <h2>Signin</h2>
                 </div>
                 <div className='flex text-white'>
@@ -99,7 +99,7 @@ class Signup extends Component {
                   <input
                     className="input-box text-white text-base py-2 bg-transparent placeholder-white"
                     placeholder='Secret Key'
-                    type="text"
+                    type="password"
                     id="Secret Key"
                     onChange={e => this.setState({ secretKey: e.target.value })}
                   />) : null}
